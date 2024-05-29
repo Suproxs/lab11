@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Proveedores</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .supplier-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .supplier-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .supplier-container input, .supplier-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .supplier-container button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .supplier-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="supplier-container">
+        <h2>Registro de Proveedores</h2>
+        <form action="/register-supplier" method="post">
+            <input type="text" name="company_name" placeholder="Nombre de la empresa" required>
+            <input type="text" name="contact_name" placeholder="Nombre del contacto" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="tel" name="phone" placeholder="Teléfono" required>
+            <textarea name="address" placeholder="Dirección" rows="3" required></textarea>
+            <textarea name="description" placeholder="Descripción de los productos o servicios" rows="5" required></textarea>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
